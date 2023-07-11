@@ -20,6 +20,7 @@
         @endforeach
         </tbody>
     </table>
+    @include('pagination.default', ['paginator' => $tasks])
     <br>
     <button type="button" style="background: darkslateblue;font-weight: bold;padding: 10px; color: #9ca3af" onclick="window.location='{{ route("stats.index") }}'">Show Statistics</button>
     </body>
