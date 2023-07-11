@@ -8,7 +8,7 @@
         <br>
         <br>
         <label for="description">Description</label>
-        <input type="text" name="description" required/>
+        <textarea rows="4", cols="54" id="description" name="description" style="resize:none">Description</textarea>
         <br>
         <br>
         <label for="assigned_to_id">Assigned To</label>
