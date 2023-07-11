@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use _34ml\EcommerceProduct\Models\Category;
+use App\Jobs\UpdateStats;
 use App\Models\Admin;
 use App\Models\Task;
 use App\Models\User;
@@ -40,43 +41,11 @@ class TaskController extends Controller
             'title'              => ['required', 'string'],
             'description'           => ['required', 'string'],
             'assigned_to_id'        => ['required', 'exists:users,id'],
-            'assigned_by_id' => ['sometimes', 'exists:admins,id'],
+            'assigned_by_id' => ['required', 'exists:admins,id'],
         ]);
 
         Task::create($validated);
-
+        dispatch(new UpdateStats($validated['assigned_to_id']));
         return redirect(route('tasks.index'));
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }

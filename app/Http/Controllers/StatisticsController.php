@@ -10,7 +10,7 @@ class StatisticsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function show()
+    public function index()
     {
         $stats = QueryBuilder::for(Statistics::class)->defaultSort('-tasks_no')
             ->limit(10)->get();
