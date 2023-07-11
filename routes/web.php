@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [\App\Http\Controllers\TaskController::class,'create']);
+
 Route::resources([
     'tasks' => \App\Http\Controllers\TaskController::class,
     'stats' => \App\Http\Controllers\StatisticsController::class,
 ]);
-
