@@ -6,8 +6,10 @@
         <label for="title">Title</label>
         <input type="text" name="title" required/>
         <br>
+        <br>
         <label for="description">Description</label>
         <input type="text" name="description" required/>
+        <br>
         <br>
         <label for="assigned_to_id">Assigned To</label>
         <select name="assigned_to_id" class="form-control">
@@ -16,6 +18,7 @@
             @endforeach
         </select>
         <br>
+        <br>
         <label for="assigned_by_id">Assigned To</label>
         <select name="assigned_by_id" class="form-control">
             @foreach($admins as $admin)
@@ -23,7 +26,8 @@
             @endforeach
         </select>
         <br>
-        <button>Create Task</button>
+        <br>
+        <button style="background: darkslateblue;font-weight: bold;padding: 10px; color: #9ca3af">Create Task</button>
     </form>
     </body>
 </html>

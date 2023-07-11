@@ -20,7 +20,7 @@
         @endforeach
         </tbody>
     </table>
-
-    <button type="button" onclick="window.location='{{ route("stats.index") }}'">Show Statistics</button>
+    <br>
+    <button type="button" style="background: darkslateblue;font-weight: bold;padding: 10px; color: #9ca3af" onclick="window.location='{{ route("stats.index") }}'">Show Statistics</button>
     </body>
 </html>

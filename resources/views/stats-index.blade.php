@@ -16,5 +16,9 @@
         @endforeach
         </tbody>
     </table>
-    </body>
+    <br>
+
+    <button type="button" style="background: darkslateblue;font-weight: bold;padding: 10px; color: #9ca3af" onclick="window.location='{{ route("tasks.create") }}'">Home</button>
+
+</body>
 </html>
